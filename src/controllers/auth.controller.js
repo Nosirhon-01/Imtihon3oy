@@ -1,7 +1,7 @@
 import Staff from "../models/Staff.js";
 import { hashPassword, comparePassword } from "../utils/hash.js";
 import { generateToken } from "../utils/token.js";
-import CustomError from "../utils/Custom.Error.js";
+import CustomError from "../utils/CustomError.js";
 
 export const register = async (req, res) => {
   const password = await hashPassword(req.body.password);
